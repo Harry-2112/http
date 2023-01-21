@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Usuarios</h1>
+  <button class="btn btn-primary" (click)="mostrar()" *ngIf="usuarios.length==0">Mostrar Usuarios</button>
+  <button class="btn btn-danger" (click)="ocultar()" *ngIf="usuarios.length!==0">Ocultar Usuarios</button>
+  <hr>
+  <div class="usuarios" *ngIf="usuarios.length!==0">
+    <ul *ngFor="let item of usuarios">
+      <li>{{item.name}}</li>
+    </ul>
+  </div>
+</div>
